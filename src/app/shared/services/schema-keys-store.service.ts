@@ -10,7 +10,13 @@ export class SchemaKeysStoreService {
   constructor() { }
 
   public forPath(path: string) {
-    return this.keyStoreMap[`${this.schemaSeparator}${path}`];
+    console.log(this.keyStoreMap);
+    if (path === ''){
+      return this.keyStoreMap[''];
+    }
+    else{
+      return this.keyStoreMap[`${this.schemaSeparator}${path}`];
+    }
   }
 
   public buildSchemaKeyStore(schema: {}) {
