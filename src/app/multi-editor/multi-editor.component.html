@@ -12,7 +12,7 @@
     </div>
     <div>
       <ul *ngFor="let record of records">
-        <pre>{{record | tagFilter: filterExpression | json}}</pre>
+        <pre>{{record | tagFilter:schema: filterExpression | json}}</pre>
       </ul>
     </div>
   </div>
